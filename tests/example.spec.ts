@@ -51,7 +51,7 @@ test.describe('My first test suite', () => {
 	})
 })
 
-test.describe('Hooks', () => {
+test.describe.parallel('Hooks', () => {
 	test.beforeEach(async ({ page }) => {
 		await page.goto('https://www.example.com/')
 	})
