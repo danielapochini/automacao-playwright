@@ -4,7 +4,8 @@ const config: PlaywrightTestConfig = {
 		headless: true,
 		viewport: { width: 1280, height: 720 },
 		ignoreHTTPSErrors: true,
-		video: 'on-first-retry',
+		video: 'retain-on-failure',
+		screenshot: 'only-on-failure',
 		browserName: 'firefox',
 	},
 }
