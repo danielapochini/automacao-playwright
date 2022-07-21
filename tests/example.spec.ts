@@ -33,6 +33,7 @@ test.describe('My first test suite', () => {
 	test('Assertions @myTag', async ({ page }) => {
 		//npx playwright test --grep @myTag executes only this testcase
 		//npx playwright test --grep-invert @myTag executes all testcase but this one
+
 		await page.goto('https://www.example.com/')
 		await expect(page).toHaveURL('https://www.example.com/')
 		await expect(page).toHaveTitle('Example Domain')
@@ -46,5 +47,16 @@ test.describe('My first test suite', () => {
 		const nonExistentElement = page.locator('h5')
 
 		await expect(nonExistentElement).not.toBeVisible()
+	})
+
+	test('Full page Screenshot', async ({ page }) => {
+		await page.goto('https://www.example.com/')
+		await page.screenshot({ path: 'screenshots/screenshot.png', fullPage: true })
+	})
+
+	test.only('Single element Screenshot', async ({ page }) => {
+		await page.goto('https://www.example.com/')
+		const element = page.locator('h1')
+		await element.screenshot({ path: 'screenshots/single-element-screenshot.png' })
 	})
 })
