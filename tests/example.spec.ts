@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test'
+import { loadHomePage, assertTitle } from '../helpers'
 
 test('basic test', async ({ page }) => {
 	await page.goto('https://www.example.com/')
@@ -63,4 +64,9 @@ test.describe('Hooks', () => {
 		const element = page.locator('h1')
 		await element.screenshot({ path: 'screenshots/single-element-screenshot.png' })
 	})
+})
+
+test.only('Custom helpers', async ({ page }) => {
+	await loadHomePage(page)
+	await assertTitle(page)
 })
