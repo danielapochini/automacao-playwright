@@ -5,16 +5,17 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "playwright test",
-		"tests:firefox": "playwright test --project=firefox",
-		"tests:chrome": "playwright test --project=chromium",
-		"tests:webkit": "playwright test --project=webkit",
+		"tests:firefox": "playwright test --project=Firefox",
+		"tests:chrome": "playwright test --project=Chromium",
+		"tests:webkit": "playwright test --project=Webkit",
 		"tests:e2e": "playwright test --project=firefox --config=configs/e2e.config.ts",
 		"tests:visual:chrome": "playwright test --config=configs/visual.config.ts --project=Chromium",
 		"tests:visual:firefox": "playwright test --config=configs/visual.config.ts --project=Firefox",
 		"tests:visual:webkit": "playwright test --config=configs/visual.config.ts --project=Webkit",
 		"tests:visual:chrome:update": "playwright test --config=configs/visual.config.ts --project=Chromium --update-snapshots",
 		"tests:visual:firefox:update": "playwright test --config=configs/visual.config.ts --project=Firefox --update-snapshots",
-		"tests:visual:webkit:update": "playwright test --config=configs/visual.config.ts --project=Webkit --update-snapshots"
+		"tests:visual:webkit:update": "playwright test --config=configs/visual.config.ts --project=Webkit --update-snapshots",
+		"tests:api": "playwright test --config=configs/api.config.ts --project=Firefox"
 	},
 	"keywords": [
 		"playwright",
