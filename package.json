@@ -5,9 +5,10 @@
 	"main": "index.js",
 	"scripts": {
 		"test": "playwright test",
-		"tests:firefox": "playwright test --browser=firefox",
-		"tests:chrome": "playwright test --browser=chromium",
-		"tests:webkit": "playwright test --browser=webkit"
+		"tests:firefox": "playwright test --project=firefox",
+		"tests:chrome": "playwright test --project=chromium",
+		"tests:webkit": "playwright test --project=webkit",
+		"tests:e2e": "playwright test --project=firefox"
 	},
 	"keywords": [
 		"playwright",
