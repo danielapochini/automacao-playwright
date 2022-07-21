@@ -8,7 +8,7 @@
 		"tests:firefox": "playwright test --project=firefox",
 		"tests:chrome": "playwright test --project=chromium",
 		"tests:webkit": "playwright test --project=webkit",
-		"tests:e2e": "playwright test --project=firefox"
+		"tests:e2e": "playwright test --project=firefox --config=configs/e2e.config.ts"
 	},
 	"keywords": [
 		"playwright",
