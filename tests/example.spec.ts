@@ -48,14 +48,18 @@ test.describe('My first test suite', () => {
 
 		await expect(nonExistentElement).not.toBeVisible()
 	})
+})
+
+test.describe('Hooks', () => {
+	test.beforeEach(async ({ page }) => {
+		await page.goto('https://www.example.com/')
+	})
 
 	test('Full page Screenshot', async ({ page }) => {
-		await page.goto('https://www.example.com/')
 		await page.screenshot({ path: 'screenshots/screenshot.png', fullPage: true })
 	})
 
-	test.only('Single element Screenshot', async ({ page }) => {
-		await page.goto('https://www.example.com/')
+	test('Single element Screenshot', async ({ page }) => {
 		const element = page.locator('h1')
 		await element.screenshot({ path: 'screenshots/single-element-screenshot.png' })
 	})
