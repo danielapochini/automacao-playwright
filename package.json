@@ -15,7 +15,8 @@
 		"tests:visual:chrome:update": "playwright test --config=configs/visual.config.ts --project=Chromium --update-snapshots",
 		"tests:visual:firefox:update": "playwright test --config=configs/visual.config.ts --project=Firefox --update-snapshots",
 		"tests:visual:webkit:update": "playwright test --config=configs/visual.config.ts --project=Webkit --update-snapshots",
-		"tests:api": "playwright test --config=configs/api.config.ts --project=Firefox"
+		"tests:api": "playwright test --config=configs/api.config.ts --project=Firefox",
+		"tests:tips": "playwright test --config=configs/tips.config.ts --project=Firefox --reporter=reporter.ts"
 	},
 	"keywords": [
 		"playwright",
