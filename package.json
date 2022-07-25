@@ -2,7 +2,7 @@
 	"name": "automacao-playwright",
 	"version": "1.0.0",
 	"description": "Automated software testing with Playwright",
-	"main": "index.js",
+	"main": "",
 	"scripts": {
 		"test": "playwright test",
 		"tests:firefox": "playwright test --project=Firefox",
