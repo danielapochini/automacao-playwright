@@ -1,34 +1,18 @@
-import { Reporter } from '@playwright/test/reporter'
-import * as fs from 'fs'
+const reporter = require('cucumber-html-reporter')
 
-class MyReporter implements Reporter {
-	onBegin(config, suite) {
-		console.log(`Execution of ${suite.allTests().length} tests`)
-	}
-
-	onEnd(result) {
-		console.log(`Execution finished with status of ${result.status}`)
-	}
-
-	onTestBegin(test) {
-		console.log(`Execution of ${test.title} started.`)
-	}
-
-	onTestEnd(test, result) {
-		const execTime = result.duration
-
-		const data = {
-			test: test.title,
-			status: result.status,
-			executionTime: execTime,
-			errors: result.errors,
-		}
-
-		const dataToString = JSON.stringify(data, null, 2)
-		console.log(dataToString)
-
-		fs.writeFileSync('test-result.json', dataToString)
-	}
+const options = {
+  theme: 'bootstrap',
+  jsonFile: 'cucumber_report.json',
+  output: 'reports/cucumber_report.html',
+  reportSuiteAsScenario: true,
+  scenarioTimestamp: true,
+  launchReport: false,
+  metadata: {
+    'App Version': '2.0.0',
+    'Test Environment': 'STAGING',
+    Browser: 'Chrome 54.0',
+    Platform: 'Windows 10',
+  },
 }
 
-export default MyReporter
+reporter.generate(options)

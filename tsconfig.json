@@ -1,0 +1,6 @@
+{
+	"compilerOptions": {},
+	"ts-node": {
+		"transpileOnly": true
+	}
+}
