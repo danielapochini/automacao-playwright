@@ -1,0 +1,26 @@
+version: '3'
+services:  
+ 
+  e2e:
+    image: 'docker-playwright'
+    command: 'test'
+    volumes:
+      - ./playwright-report:/playwright-docker/playwright-report
+ 
+  e2e-chrome:
+    image: 'docker-playwright'
+    command: 'tests:chrome'
+    volumes:
+      - ./playwright-report:/playwright-docker/playwright-report
+ 
+  e2e-firefox:
+    image: 'docker-playwright'
+    command: 'tests:firefox' 
+    volumes:
+      - ./playwright-report:/playwright-docker/playwright-report
+
+  e2e-webkit:
+    image: 'docker-playwright'
+    command: 'tests:webkit' 
+    volumes:
+      - ./playwright-report:/playwright-docker/playwright-report
