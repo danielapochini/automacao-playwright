@@ -30,3 +30,7 @@ test-results
 /tests/installation/.registry.json
 .cache/
 screenshots/
+*.mp4
+*.html
+*.png 
+test-result.json
