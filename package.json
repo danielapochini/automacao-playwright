@@ -5,9 +5,9 @@
 	"main": "",
 	"scripts": {
 		"test": "playwright test",
-		"tests:firefox": "playwright test --project=Firefox",
-		"tests:chrome": "playwright test --project=Chromium",
-		"tests:webkit": "playwright test --project=Webkit",
+		"tests:firefox": "playwright test --project=firefox",
+		"tests:chrome": "playwright test --project=chromium",
+		"tests:webkit": "playwright test --project=webkit",
 		"tests:e2e": "playwright test --project=firefox --config=configs/e2e.config.ts",
 		"tests:visual:chrome": "playwright test --config=configs/visual.config.ts --project=Chromium",
 		"tests:visual:firefox": "playwright test --config=configs/visual.config.ts --project=Firefox",
