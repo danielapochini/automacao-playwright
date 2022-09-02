@@ -26,6 +26,7 @@ test.describe.parallel.only('Login / Logout Flow', () => {
 	test('Positive Scenario for login + logout', async ({ page }) => {
 		await homePage.clickOnSignIn()
 		await loginPage.login('username', 'password')
+		await page.goto('http://zero.webappsecurity.com/bank/account-activity.html')
 
 		const accountSummaryTab = page.locator('#account_summary_tab')
 		await expect(accountSummaryTab).toBeVisible()

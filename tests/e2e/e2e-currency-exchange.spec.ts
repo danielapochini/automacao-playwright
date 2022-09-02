@@ -7,6 +7,7 @@ test.describe.only('Currency Exchange Form', () => {
 		await page.type('#user_login', 'username')
 		await page.type('#user_password', 'password')
 		await page.click('text=Sign in')
+		await page.goto('http://zero.webappsecurity.com/bank/account-activity.html')
 	})
 
 	test('Should make currency exchange', async ({ page }) => {

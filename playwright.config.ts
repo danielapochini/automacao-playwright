@@ -2,7 +2,7 @@ import type { PlaywrightTestConfig } from '@playwright/test'
 const config: PlaywrightTestConfig = {
 	reporter: [ ['list'], ['html', { open: 'never' }] ],
 	use: {
-		headless: true,
+		headless: false,
 		viewport: { width: 1280, height: 720 },
 		ignoreHTTPSErrors: true,
 		video: 'retain-on-failure',
